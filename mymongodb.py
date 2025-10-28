@@ -5,9 +5,10 @@ from web3 import Web3
 
 # Load environment variables
 load_dotenv(
-    
+
 )
-MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017/")
+MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017/" \
+"")
 DB_NAME = "PushChainAgent"
 COLLECTION_NAME = "address_book"
 
