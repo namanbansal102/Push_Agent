@@ -197,6 +197,7 @@ push_agent = Agent(
     - Managing address books and payment links
     - Providing blockchain insights and market data
     
+    
     Always prioritize security and confirm transactions with users.''',
     tools=tools
 )
