@@ -1,93 +1,125 @@
-# CrossFi Explorer Module (Demo-Safe)
-from typing import List, Dict
-from datetime import datetime, timedelta
-import random
+import requests
+from typing import List, Dict, Optional
+from datetime import datetime
+import json
 
+PUSH_CHAIN_API_BASE = "https://donut.push.network/api/v2"
 
-def get_transactions(wallet: str) -> List[Dict]:
-    """
-    Returns a list of transaction dictionaries for the provided wallet address.
-    """
-    return [
-        {
-            "tx_hash": f"0x{random.randint(10**15, 10**16 - 1):x}",
-            "from": wallet,
-            "to": "0xReceiverAddress",
-            "value": random.randint(1, 10),
-            "timestamp": datetime.now().isoformat()
-        } for _ in range(5)
-    ]
+def get_transactions(address: str, limit: int = 10) -> List[Dict]:
+    """Get real transactions for an address on Push Chain"""
+    try:
+        url = f"{PUSH_CHAIN_API_BASE}/addresses/{address}/transactions"
+        params = {"limit": limit}
+        response = requests.get(url, params=params)
+        
+        if response.status_code == 200:
+            data = response.json()
+            return data.get("items", [])
+        else:
+            return [{"error": f"API error: {response.status_code}"}]
+    except Exception as e:
+        return [{"error": str(e)}]
 
-def get_block_type_data(block_type: str) -> Dict:
-    """
-    Returns summary data for a specified type of block.
-    """
-    return {
-        "type": block_type,
-        "count": random.randint(100, 500),
-        "avg_tx_per_block": round(random.uniform(0, 2.5), 2)
-    }
+def get_block_data(block_number: Optional[int] = None) -> Dict:
+    """Get block information from Push Chain"""
+    try:
+        if block_number:
+            url = f"{PUSH_CHAIN_API_BASE}/blocks/{block_number}"
+        else:
+            url = f"{PUSH_CHAIN_API_BASE}/blocks"
+            
+        response = requests.get(url)
+        
+        if response.status_code == 200:
+            return response.json()
+        else:
+            return {"error": f"API error: {response.status_code}"}
+    except Exception as e:
+        return {"error": str(e)}
 
-def get_transaction_chart_data() -> Dict:
-    """
-    Provides chart-ready transaction volume data over the past 7 days.
-    """
-    return {
-        "labels": [f"Day {i}" for i in range(1, 8)],
-        "values": [random.randint(50, 200) for _ in range(7)]
-    }
+def get_latest_blocks(limit: int = 10) -> List[Dict]:
+    """Get latest blocks from Push Chain"""
+    try:
+        url = f"{PUSH_CHAIN_API_BASE}/blocks"
+        params = {"limit": limit}
+        response = requests.get(url, params=params)
+        
+        if response.status_code == 200:
+            data = response.json()
+            return data.get("items", [])
+        else:
+            return [{"error": f"API error: {response.status_code}"}]
+    except Exception as e:
+        return [{"error": str(e)}]
 
-def get_market_chart_data() -> Dict:
-    """
-    Returns sample market data including timestamps and price values.
-    """
-    now = datetime.now()
-    return {
-        "timestamps": [(now - timedelta(days=i)).isoformat() for i in range(7)],
-        "prices": [round(random.uniform(0.1, 2.0), 2) for _ in range(7)]
-    }
+def get_token_transfers(token_address: str, limit: int = 20) -> List[Dict]:
+    """Get token transfer events"""
+    try:
+        url = f"{PUSH_CHAIN_API_BASE}/tokens/{token_address}/transfers"
+        params = {"limit": limit}
+        response = requests.get(url, params=params)
+        
+        if response.status_code == 200:
+            data = response.json()
+            return data.get("items", [])
+        else:
+            return [{"error": f"API error: {response.status_code}"}]
+    except Exception as e:
+        return [{"error": str(e)}]
 
-def get_block_by_number_or_hash(block: str) -> Dict:
-    """
-    Retrieves data for a specific block by number or hash.
-    """
-    return {
-        "block_id": block,
-        "miner": "0xMinerExample0000000000",
-        "tx_count": random.randint(0, 50),
-        "timestamp": datetime.now().isoformat()
-    }
+def get_token_holders(token_address: str, limit: int = 50) -> List[Dict]:
+    """Get token holders for a specific token"""
+    try:
+        url = f"{PUSH_CHAIN_API_BASE}/tokens/{token_address}/holders"
+        params = {"limit": limit}
+        response = requests.get(url, params=params)
+        
+        if response.status_code == 200:
+            data = response.json()
+            return data.get("items", [])
+        else:
+            return [{"error": f"API error: {response.status_code}"}]
+    except Exception as e:
+        return [{"error": str(e)}]
 
-def get_native_coin_holders() -> List[Dict]:
-    """
-    Returns a list of accounts and their balances.
-    """
-    return [
-        {"address": f"0xHolder{i:02X}", "balance": random.uniform(10, 1000)}
-        for i in range(5)
-    ]
+def get_address_balance(address: str) -> Dict:
+    """Get PC balance and token balances for address"""
+    try:
+        url = f"{PUSH_CHAIN_API_BASE}/addresses/{address}"
+        response = requests.get(url)
+        
+        if response.status_code == 200:
+            return response.json()
+        else:
+            return {"error": f"API error: {response.status_code}"}
+    except Exception as e:
+        return {"error": str(e)}
 
-def get_coin_balance_history_by_day(address: str) -> Dict:
-    """
-    Simulates daily balance snapshots for a given address.
-    """
-    today = datetime.now()
-    return {
-        "address": address,
-        "history": [
-            {
-                "date": (today - timedelta(days=i)).strftime('%Y-%m-%d'),
-                "balance": round(random.uniform(1.0, 100.0), 2)
-            } for i in range(7)
-        ]
-    }
+def get_market_chart_data(days: int = 7) -> Dict:
+    """Get Push Chain market data"""
+    try:
+        # This would integrate with Push Chain's market data API
+        url = f"{PUSH_CHAIN_API_BASE}/stats/charts/transactions"
+        params = {"period": f"{days}d"}
+        response = requests.get(url, params=params)
+        
+        if response.status_code == 200:
+            return response.json()
+        else:
+            return {"error": f"API error: {response.status_code}"}
+    except Exception as e:
+        return {"error": str(e)}
 
-def get_tokens_list(query: str = "", token_type: str = "erc20") -> List[Dict]:
-    """
-    Returns token entries based on query and token type.
-    """
-    sample_tokens = ["TokenA", "TokenB", "TokenC", "TokenD"]
-    return [
-        {"name": name, "address": f"0x{name.lower()}12345", "type": token_type}
-        for name in sample_tokens if query.lower() in name.lower()
-    ]
+def search_transactions(query: str) -> List[Dict]:
+    """Search for transactions by hash, address, or block"""
+    try:
+        url = f"{PUSH_CHAIN_API_BASE}/search"
+        params = {"q": query}
+        response = requests.get(url, params=params)
+        
+        if response.status_code == 200:
+            return response.json().get("items", [])
+        else:
+            return [{"error": f"API error: {response.status_code}"}]
+    except Exception as e:
+        return [{"error": str(e)}]
