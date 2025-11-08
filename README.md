@@ -1,8 +1,8 @@
-# ⚡ Trishul AI - Intelligent Blockchain Agent on Somnia Testnet
+# 🚀 AI-Powered Blockchain Agent on Push Chain
 
-![Somnia Network](https://img.shields.io/badge/Built%20on-Somnia%20Testnet-blue) ![AI Agent](https://img.shields.io/badge/AI-Gemini%202.5-green) ![Blockchain](https://img.shields.io/badge/Network-Somnia-purple)
+![Push Protocol](https://img.shields.io/badge/Built%20on-Push%20Chain-purple) ![AI Agent](https://img.shields.io/badge/AI-Gemini%202.5-green) ![Blockchain](https://img.shields.io/badge/Network-Push%20Testnet-orange)
 
-An intelligent blockchain agent that automates crypto transactions, manages payments, deploys smart contracts, and provides comprehensive blockchain insights - all through natural language conversations on Somnia Network.
+An intelligent blockchain agent that automates crypto transactions, manages payments, deploys smart contracts, and provides comprehensive blockchain insights - all through natural language conversations on Push Chain.
 
 ---
 
@@ -12,17 +12,17 @@ An intelligent blockchain agent that automates crypto transactions, manages paym
 
 #### **Scheduled Payments**
 - Send crypto payments at any future date/time using natural language
-- **Example**: "Send 100 STT to Alice next Monday at 10am"
+- **Example**: "Send 100 PC to Alice next Monday at 10am"
 - **Bulk Scheduling**: Pay 100 employees automatically every month
   ```
-  "Schedule 5 STT to employee1.eth on 1st of every month"
-  "Send birthday bonus of 1 STT to john.eth on December 15"
+  "Schedule 5 PC to employee1.eth on 1st of every month"
+  "Send birthday bonus of 1 PC to john.eth on December 15"
   ```
 
 #### **Payment Links**
 - Generate shareable payment links for easy crypto collection
 - Track all payment link transactions
-- **Example**: "Create a payment link for 50 STT to my address"
+- **Example**: "Create a payment link for 50 PC to my address"
 
 #### **Recurring Payments**
 - Set up automatic monthly salaries
@@ -35,8 +35,8 @@ An intelligent blockchain agent that automates crypto transactions, manages paym
 
 #### **Token Transfers**
 ```
-"Send 10 STT to 0xABC...123"
-"Transfer 5 STT to alice.eth"
+"Send 10 PC to 0xABC...123"
+"Transfer 5 PC to alice.eth"
 "Send 100 tokens to my friend Bob"
 ```
 
@@ -44,7 +44,7 @@ An intelligent blockchain agent that automates crypto transactions, manages paym
 ```
 "What's my wallet balance?"
 "Check balance of token XYZ"
-"Show my STT holdings"
+"Show my PC holdings"
 ```
 
 #### **Transaction Tracking**
@@ -58,13 +58,13 @@ An intelligent blockchain agent that automates crypto transactions, manages paym
 
 ### 🪙 Token & Smart Contract Deployment
 
-#### **Create Memecoins on Somnia Network**
+#### **Create Memecoins on Push Chain**
 Deploy your own tokens in seconds:
 ```
 "Create a memecoin called DogeMoon with symbol DMOON"
 "Deploy a token named ShibaKing"
 ```
-*Trishul AI even adds fun commentary about your memecoin!*
+*The AI agent even adds fun commentary about your memecoin!*
 
 #### **Deploy Custom Contracts**
 ```
@@ -77,7 +77,7 @@ Deploy your own tokens in seconds:
 
 ### 📊 Blockchain Explorer Features
 
-Get real-time blockchain data from Somnia Testnet:
+Get real-time blockchain data from Push Chain:
 
 - **Latest Blocks**: `"Show me the latest 10 blocks"`
 - **Block Information**: `"Get details of block #12345"`
@@ -114,7 +114,7 @@ Store and manage your digital assets on-chain:
 
 #### **Live Market Information**
 ```
-"What's the current price of Somnia token?"
+"What's the current price of Push token?"
 "Show me token market data"
 "Get token tickers"
 ```
@@ -149,12 +149,12 @@ Never lose track of your contacts:
 - Generate payment links for customers
 
 ### **For HR Departments**
-- Automate monthly salary disbursements in STT
-- Send birthday bonuses (e.g., "1 STT on employee birthday")
+- Automate monthly salary disbursements in PC
+- Send birthday bonuses (e.g., "1 PC on employee birthday")
 - Anniversary rewards and milestone payments
 - Track all employee payment history
 
-### **For Crypto Projects on Somnia**
+### **For Crypto Projects on Push Chain**
 - Deploy memecoins in seconds
 - Airdrop tokens to community members
 - Create custom smart contracts
@@ -171,7 +171,7 @@ Never lose track of your contacts:
 ## 🛠️ Technical Stack
 
 - **AI Model**: Google Gemini 2.5 Flash
-- **Blockchain**: Somnia Network (Testnet)
+- **Blockchain**: Push Protocol (Testnet Donut)
 - **Smart Contracts**: EVM-Compatible
 - **Scheduling**: APScheduler
 - **Database**: MongoDB
@@ -183,22 +183,22 @@ Never lose track of your contacts:
 
 ### Scheduling
 ```
-"Send 50 STT to 0xABC...123 after 5 minutes"
-"Schedule 10 STT to alice.eth on December 25 at 9am"
-"Pay my 100 employees 5 STT each on 1st of next month"
-"Send 1 STT birthday bonus to john.eth on March 10"
+"Send 50 PC to 0xABC...123 after 5 minutes"
+"Schedule 10 PC to alice.eth on December 25 at 9am"
+"Pay my 100 employees 5 PC each on 1st of next month"
+"Send 1 PC birthday bonus to john.eth on March 10"
 ```
 
 ### Token Operations
 ```
 "Create a memecoin called MoonDoge with symbol MDOGE"
 "Deploy an ERC20 token named StarToken"
-"What's my STT balance?"
+"What's my PC balance?"
 ```
 
 ### Blockchain Queries
 ```
-"Show me the latest blocks on Somnia"
+"Show me the latest blocks on Push Chain"
 "Get transactions for address 0xDEF...456"
 "What are the top token holders of token 0xGHI...789?"
 "Show market chart for last 30 days"
@@ -213,7 +213,7 @@ Never lose track of your contacts:
 
 ### Payment Links
 ```
-"Generate payment link for 100 STT"
+"Generate payment link for 100 PC"
 "Show all my payment link transactions"
 ```
 
@@ -221,11 +221,11 @@ Never lose track of your contacts:
 
 ## 🌐 Network Information
 
-**Current Network**: Somnia Testnet
-- **Chain ID**: 50311
-- **RPC URL**: https://dream-rpc.somnia.network/
-- **Block Explorer**: https://somnia-testnet.socialscan.io/
-- **Native Token**: STT (Somnia Test Token)
+**Current Network**: Push Protocol Testnet (Donut)
+- **Chain ID**: 42101
+- **RPC URL**: https://evm.rpc-testnet-donut-node2.push.org/
+- **Block Explorer**: https://donut.push.network/
+- **Native Token**: PC (Push Chain Token)
 
 **Mainnet Features Coming Soon**:
 - Cross-chain swaps
@@ -247,28 +247,28 @@ Never lose track of your contacts:
 ## 🤝 Use Cases in Action
 
 ### Example 1: Monthly Employee Payroll
-> *"Schedule 5 STT salary to 100 employees every 1st of the month"*
+> *"Schedule 5 PC salary to 100 employees every 1st of the month"*
 
-Trishul AI automatically:
+The AI agent automatically:
 - Resolves employee addresses from your address book
 - Schedules recurring monthly payments
 - Tracks all transactions
 - Sends confirmation for each payment
 
 ### Example 2: Birthday Bonuses
-> *"Send 1 STT to John on his birthday December 15 at 9am"*
+> *"Send 1 PC to John on his birthday December 15 at 9am"*
 
-Trishul AI:
+The agent:
 - Schedules the payment for the exact date/time
 - Fetches John's address if saved in your book
 - Executes automatically when the time comes
 
 ### Example 3: Deploy a Memecoin
-> *"Create a memecoin called SomniaMoon with symbol SMOON"*
+> *"Create a memecoin called PushMoon with symbol PMOON"*
 
-Trishul AI:
+The agent:
 - Generates the token contract
-- Deploys it on Somnia Network
+- Deploys it on Push Chain
 - Returns the token address
 - Adds a fun comment about your memecoin!
 
@@ -276,29 +276,22 @@ Trishul AI:
 
 ## 🎉 Get Started
 
-Just talk to Trishul AI naturally:
+Just talk to the AI agent naturally:
 
-> *"Hey, pay my 100 employees 5 STT each on the 1st of every month, and send 1 STT bonus to anyone on their birthday"*
+> *"Hey, pay my 100 employees 5 PC each on the 1st of every month, and send 1 PC bonus to anyone on their birthday"*
 
-Trishul AI handles the rest! 🚀
+The agent handles the rest! 🚀
 
 ---
 
 ## 📞 Support & Marketplace
 
-- **Blockchain**: Built on Somnia Network
+- **Blockchain**: Built on Push Chain
 - **AI Agent Marketplace**: Coming Soon
 - **Mainnet Swap Features**: In Development
 
 ---
 
-## 🔱 About Trishul AI
-
-Trishul AI is named after the powerful trident (Trishul in Sanskrit), symbolizing the three core pillars of blockchain automation:
-- **Intelligence**: AI-powered decision making
-- **Efficiency**: Automated task execution
-- **Security**: Safe and reliable transactions
-
-**Made with ❤️ for the Somnia Network Community**
+**Made with ❤️ for the Push Chain Community**
 
 *Bringing AI-powered automation to blockchain, one conversation at a time.*
